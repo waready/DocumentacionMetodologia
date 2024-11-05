@@ -1,9 +1,21 @@
-# Using Vue in Markdown
+# Requisitos previos a convertir
 
-## Browser API Access Restrictions
+## Bantotal
 
-Because VuePress applications are server-rendered in Node.js when generating static builds, any Vue usage must conform to the [universal code requirements](https://ssr.vuejs.org/en/universal.html). In short, make sure to only access Browser / DOM APIs in `beforeMount` or `mounted` hooks.
+Al momento de recibir los modelos del cliente, tratar de compilar la KB de manera masiva en GX8. En caso de no compilar devolver al cliente.
 
-If you are using or demoing components that are not SSR friendly (for example containing custom directives), you can wrap them inside the built-in `<ClientOnly>` component:
+## Cliente
 
-##
+* Solicitar KBs que compilen en GX8. Cuando recibimos tratamos de compilar en GX8, si no compila, devolvemos.
+
+* Solicitar SP, Funciones, CL (según corresponda), y toda programación no GX que no esté en las KB.
+
+* Solicitar nomenclaturas de tablas y programas que debemos convertir.
+
+* Solicitar al cliente query con lista de cantidad de tablas que se tiene en producción actualmente (armar query)
+
+* Solicitar KB de WF separada. En el resto de KBS no pueden existir objetos WF.
+
+* Solicitar el repositorio de clases con nomenclatura particular de Producción, y validar que no faltan programas en las KB. Si faltan, comunicar al cliente.
+
+* nuevo enlace

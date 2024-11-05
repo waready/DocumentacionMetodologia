@@ -58,6 +58,8 @@ module.exports = {
           children: [
             '',
             'using-vue',
+            'using-vue1',
+            'using-vue2',
           ]
         }
       ],
