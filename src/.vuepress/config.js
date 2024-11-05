@@ -4,7 +4,11 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Vuepress Docs Boilerplate',
+
+  dest:"docs",
+
+  base:"/DocumentacionMetodologia/",
+  title: 'Documentos Metodología Act. Tec.',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -66,5 +70,6 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
+    'demo-code'
   ]
 }
